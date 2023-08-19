@@ -1,0 +1,34 @@
+.products{
+    padding: 30px 50px;
+    display: flex;
+}
+.products .left{
+    flex: 1;
+    position: sticky;
+    height: 100%;
+    top: 50px;
+}
+.products .filteItem{
+    margin-bottom: 30px;
+}
+.filteItems .h2{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.inputItem{
+    margin-bottom: 10px;
+}
+.inputItem label{
+    margin-left: 10px;
+}
+
+.products .right{
+    flex: 3;
+
+}
+.products .catImg{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
