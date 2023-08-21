@@ -26,20 +26,23 @@
     gap: 20px;
     align-items: center;
 }
+
 .navbar .wrapper .item{
     display: flex;
     align-items: center;
     font-size: 18px;
 }
-.icons-Navbar{
+.navbar  .icons-Navbar{
     display: flex;
+    gap: 15px;
+    cursor: pointer;
     align-items: center;
     font-size: 20px;
 }
 .navbar .wrapper .cart{
     position: relative;
 }
-.cart span{
+.navbar .cart span{
     font-size: 8px;
     height: 15px;
     width: 15px;

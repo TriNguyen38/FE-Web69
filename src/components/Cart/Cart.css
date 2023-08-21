@@ -1,0 +1,72 @@
+.cart-inside{
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    z-index: 999;
+    background-color: white;
+    padding: 20px;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+.cart-inside h1{
+    margin-bottom: 30px;
+    color: gray;
+    font-weight: 400;
+    font-size: 24px;
+}
+.cart-inside .item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+
+}
+.cart-inside .item img{
+    width: 80px;
+    height: 100px;
+    object-fit: cover; ;
+}
+.cart-inside .details h1{
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.cart-inside .details p{
+    color: gray;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.cart-inside .details .price{
+    color: rgb(141, 141, 228);
+}
+.cart-inside .details delete-icon{
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+}
+.cart-inside .total{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 18px ;
+    margin-bottom: 20px;
+}
+.cart-inside button{
+    width: 250px;
+    padding: 10px;
+    background-color: blue;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+}
+.cart-inside .reset{
+    color: red;
+    font-size: 12px;
+    cursor: pointer;
+}
