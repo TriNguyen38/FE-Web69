@@ -7,18 +7,19 @@ import picture3 from '..//../Slide/pexels-the-lazy-artist-gallery-1342609.jpg';
 import List from '../List/List';
 
 const Card = ({item}) => {
+
   return (
     <Link className='link' to={`/product/${item.id}`}>
         <div className="card">
           <div className="image">
             {item.isNew && <span>New Seasion</span> }
             <img className='main' src={item.img} alt="main" />
-            <img className='second' src={item.img2} alt="second" />
+            <img className='second' src={item.img} alt="second" />
           </div>
-          <h2>{item.title}</h2>
+          <h2>{item.name}</h2>
           <div className="prices">
-            <h3>{item.oldPrice} VND</h3>
-            <h3>{item.price} VND</h3>
+            <h3>250$</h3>
+            <h3>{item.price} $</h3>
           </div>
         </div>
     </Link>

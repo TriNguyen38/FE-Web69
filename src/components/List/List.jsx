@@ -1,53 +1,55 @@
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import "./List.css";
-import picture1 from "..//../Slide/pexels-terje-sollie-298863.jpg";
-import picture2 from "..//../Slide/pexels-ryan-holloway-242829.jpg";
-import picture3 from "..//../Slide/pexels-the-lazy-artist-gallery-1342609.jpg";
 import Card from "../Card/Card";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const List = () => {
-  const data = [
-    {
-      id: 1,
-      img: picture1,
-      img2: picture2,
-      title: "abc",
-      isNew: true,
-      oldPrice: 12,
-      price: 10,
-    },
-    {
-      id: 2,
-      img: picture2,
-      title: "def",
-      isNew: true,
-      oldPrice: 10,
-      price: 8,
-    },
-    {
-      id: 3,
-      img: picture3,
-      title: "ghi",
-      isNew: true,
-      oldPrice: 8,
-      price: 6,
-    },
-    {
-      id: 4,
-      img: picture1,
-      title: "jkl",
-      isNew: true,
-      oldPrice: 6,
-      price: 4,
-    },
-  ];
+  const DB_URL = "http://localhost:8080/api/categories";
+  const [showData, setShowData] = useState([]);
+  const { _id } = useParams();
+  console.log(_id);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${DB_URL}/${_id}`);
+        setShowData(response.data.datas.products);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, [DB_URL, _id]);
+
   return (
-    <div className="list">
-      {data?.map(item => (
-        <Card item={item} key={item.id} />
-      ))}
-    </div>
+    <>
+      {showData && (
+        <div className="list" key={showData._id}>
+          {/* {showData.map((item)=>(<Card 
+          item={{ id: item._id }} 
+          key={item._id}/>))} */}
+          {showData.map((item) => (
+            <Card
+              key={item._id}
+              item={{
+                id: item._id,
+                img: item.imgs[0],
+                name: item.name,
+                isNew: true,
+                oldPrice: item.oldPrice,
+                price: item.price,
+              }}
+            />
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 
 export default List;
+
+

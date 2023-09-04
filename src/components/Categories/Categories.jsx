@@ -17,7 +17,7 @@ const Categories = () => {
         <div className="row">
         <img src={picture2} alt="" />
           <button>
-            <Link className="link" to='products/1'>Nữ</Link>
+            <Link className="link" to='products/64e9ba84d770c98b73a3a9ef'>Nữ</Link>
           </button>
         </div>
       </div>
@@ -25,7 +25,7 @@ const Categories = () => {
         <div className="row">
         <img src={picture2} alt="" />
           <button>
-            <Link className="link" to='products/1'>Nam</Link>
+            <Link className="link" to='products/64ec420897b44cbabe3aaae6'>Nam</Link>
           </button>
         </div>
       </div>
