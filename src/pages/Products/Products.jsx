@@ -12,8 +12,6 @@ const DB_URL = "http://localhost:8080/api/products";
 const Products = () => {
   const catId = parseInt(useParams().id);
   const { categoryId, paramId} = useParams()
-  const [maxPrice, setMaxPrice] = useState(1000);
-  const [sort, setSort] = useState(null);
   const [data, setData] = useState([]);
   const [select,setSelect] = useState([]);
   
@@ -39,7 +37,7 @@ const Products = () => {
 
       <div className="right">
         <img className="catImg" src={picture1} alt="" />
-        <List  maxPrice={maxPrice} sort={sort} select = {select} />
+        <List select = {select} />
       </div>
       
     </div>
